@@ -1,0 +1,14 @@
+header{
+    text-align: center;
+}
+.navbar-text{
+    color:purple;
+}
+.btn.btn-light{
+    background-color: purple;
+    color: white;
+}
+#start-quiz{
+    text-align: center;
+    font-weight: 600;
+}
