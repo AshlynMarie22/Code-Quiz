@@ -1,4 +1,4 @@
-header{
+.h1{
     text-align: center;
 }
 .navbar-text{
@@ -11,4 +11,7 @@ header{
 #start-quiz{
     text-align: center;
     font-weight: 600;
+}
+#questionA{
+    text-align: left;
 }
