@@ -298,6 +298,21 @@ function question2(){
     }
 
   };
+
+  function endGame(){
+    questionHeader.innerText = "Your score is: " + secondsLeft + "!";
+    button1.style.display = "none";
+    button2.style.display = "none";
+    button3.style.display = "none";
+    button4.style.display = "none";
+    timeEl.style.display = "none";
+    answerResponse.style.display = "none";
+    console.log(timeEl.textContent);
+    getInitials();
+
+  };
+  getInitials();
+
 // function endgame(){
    // score = secondsLeft
 
