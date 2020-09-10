@@ -6,11 +6,12 @@
 * [Installation](#installation)
 * [Preview Website](#preview-website)
 * [How to Use](#how-to-use)
+* [Known Issues](#known-issues)
 * [License](#mit-license)
 
 ## Description
 
-This is a quiz that is set to a 75 second timer. If a question is missed the timer is reduced by 10 secondds. At the end the score with logged. 
+This is a quiz that is set to a 75 second timer. If a question is missed the timer is reduced by 10 seconds. At the end the score will logged to the Highscores. 
 
 ## Installation
 
@@ -52,24 +53,30 @@ Then right click anywhere in the html file and select "Open in Default Browser":
 
 ## Preview Website
 
-Website URL: 
-```bash
-https://ashlynmarie22.github.io/Code-Quiz/
-```
-
 ![screenshot2](https://ashlynimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-09-09+at+10.52.51+PM.png)
+Website URL: 
+https://ashlynmarie22.github.io/Code-Quiz/
 
 
 ## How to Use:
 1. Select the "Start Quiz" button
 2. Select your answer
-3. What it looks like if you got it wrong:
-![Wrong](https://ashlynimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-09-09+at+10.54.27+PM.png)
+3. After you answer your first question it will immediately move to the next question and at the bottom a message will let you know if you were wrong or correct. This is what it looks like if you got it wrong:
+![Wrong](https://ashlynimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-09-10+at+3.14.30+AM.png)
 
-4. What it looks like if you got it right:
-![Correct](https://ashlynimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-09-09+at+10.55.18+PM.png)
+4. This is what it looks like if you got it right:
+![Correct](https://ashlynimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-09-10+at+3.14.43+AM.png)
+5. At the end you will be presented with your score and a chance to enter you initials to be saved to the Scoreboard:
+![Score](https://ashlynimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-09-10+at+3.03.40+AM.png)
+6. Enter your initiasls:
+![Initials](https://ashlynimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-09-10+at+3.03.58+AM.png)
+7. Click Submit to view Highscores:
+![Initials](https://ashlynimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-09-10+at+3.04.32+AM.png)
 
 
+## Known Issues:
+1. The View Highscores link does not work.
+2. The only way to start the quiz over is to refresh the page.
 
 
 ---

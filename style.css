@@ -1,35 +1,26 @@
-.h1{
-    text-align: center;
+.h1 {
+  text-align: center;
 }
-.navbar-text{
-    color:purple;
+.navbar-text {
+  color: purple;
 }
-.btn.btn-light{
-    background-color: purple;
-    color: white;
+.btn.btn-light {
+  background-color: purple;
+  color: white;
 }
-#start-quiz{
-    text-align: center;
-    font-weight: 600;
+#start-quiz {
+  text-align: center;
+  font-weight: 600;
 }
-#questionA{
-    text-align: left;
+#answer-response-correct {
+  text-align: center;
+  border-top-style: solid;
+  border-color: lightgray;
+  color: lightgray;
 }
-#answer-response-correct{
-    text-align: center;
-    border-top-style: solid;
-    border-color: lightgray;
-    color: lightgray;
-
-}
-#answer-response-wrong{
-    text-align: center;
-    border-top-style: solid;
-    border-color: lightgray;
-    color: lightgray;
-
-}
-#btn1{
-    align-self: auto;
-    order: inherit;
+#answer-response-wrong {
+  text-align: center;
+  border-top-style: solid;
+  border-color: lightgray;
+  color: lightgray;
 }

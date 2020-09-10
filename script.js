@@ -34,7 +34,6 @@ startQuizBtn.addEventListener("click", function () {
 
       if (secondsLeft < 1) {
         clearInterval(timerInterval);
-        /*   endGame();*/
       }
     }, 1000);
   }
@@ -287,15 +286,17 @@ function question5() {
     endGame();
   };
 }
+//Ending the quiz:
 
 function endGame() {
-    var finalScore = secondsLeft;
+  var finalScore = secondsLeft;
   questionHeader.innerText = "Your score is: " + secondsLeft + "!";
-  initialBox.innerText = "To save your score enter your intials in the box below:";
+  initialBox.innerText =
+    "To save your score enter your intials in the box below:";
   initialBox.style.display = "block";
   inputBox.style.display = "block";
   button1.style.display = "block";
-  button1.innerHTML = "Submit";           
+  button1.innerHTML = "Submit";
   button2.style.display = "none";
   button3.style.display = "none";
   button4.style.display = "none";
@@ -303,7 +304,11 @@ function endGame() {
   answerResponse.style.display = "none";
   console.log(secondsLeft);
   button1.onclick = function () {
-    console.log(inputBox.value +": " + finalScore);
-};
+    console.log(inputBox.value + ": " + finalScore);
+    var highScore = document.getElementById("highscore-view");
+    var totalScore = inputBox.value + ": " + finalScore;
+    localStorage.setItem("totalScore", JSON.stringify(totalScore));
+    highScore.innerText = "Highscores: " + totalScore;
+    var lastScore = JSON.parse(localStorage.getItem("totalScore"));
+  };
 }
-
