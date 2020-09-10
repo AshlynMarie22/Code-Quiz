@@ -1,10 +1,15 @@
-//Document Variables:
+
+
+
+
+
+   //Document Variables:
 var startQuizBtn = document.querySelector("#start-quiz-btn");
 var startQuiz = document.getElementById("start-quiz");
-var button1 = document.querySelector("#btn1");
-var button2 = document.querySelector("#btn2");
-var button3 = document.querySelector("#btn3");
-var button4 = document.querySelector("#btn4");
+//var button1 = document.getElementById("btn1");
+//var button2 = document.getElementById("btn2");
+//var button3 = document.getElementById("btn3");
+//var button4 = document.getElementById("btn4");
 var questionsCont = document.getElementById("questions");
 var questionHeader = document.getElementById("question-header");
 var answerWrong = document.getElementById("answer-response-wrong");
@@ -42,7 +47,6 @@ startQuizBtn.addEventListener("click", function () {
   answerRight.style.display = "none";
   answerWrong.style.display = "none";
   questionsCont.style.display="block";
- 
 });
 
 //Questions:
@@ -91,36 +95,50 @@ var allQuestions = [
     answer: "4. console.log",
   },
 ];
+var startingQuestionIndex = 0;
+var questionTitle = allQuestions[startingQuestionIndex].question;
+var allChoices = allQuestions[startingQuestionIndex].choices;
+var allAnswers = allQuestions[startingQuestionIndex].answer;
 
-question1();
-function question1() {
+function quizBody() {
+    // empty before going to the next
+    function deleteChild(){var e = document.querySelector("#list-button");
+e.innerHTML = "";}
+
+    for (var i=0; i< questionTitle.length; i++){  
+        var questionEl = document.getElementById("question-header");
+        questionEl.innerHTML = questionTitle;}
+  
+
+  for (var i = 0; i < allChoices.length; i++) {
+    //create the button
     
-    questionHeader.innerText = allQuestions[0].question;
-    button1.innerHTML = allQuestions[0].choices[0];
-    button2.innerHTML = allQuestions[0].choices[1];
-    button3.innerHTML = allQuestions[0].choices[2];
-    button4.innerHTML = allQuestions[0].choices[3];
+    const buttonEL = document.querySelector("#btn1");
+    var listButton = document.querySelector("#list-button");
 
+    buttonEL.innerText = allChoices[i];
+    listButton.appendChild(buttonEL);
 
-    button1.onclick = function(){
+    buttonEL.addEventListener("click",()=> {
+        deleteChild();
+      console.log("click");
+      console.log(buttonEL.textContent);
+      if (buttonEL.textContent == allAnswers) {
+        console.log("correct");
+        answerRight.style.display = "block";
+        
+        
+      } else {
         console.log("wrong");
         answerWrong.style.display = "block";
+ 
         secondsLeft -= 10;
-        question2();
-    }
-
-    console.log("correct");
-    answerRight.style.display = "block";
-   // buttonEL.addEventListener("click",()=> {
-        
-      console.log("click");
-
-
-  };
-
-
+      }
+      return quizBody
+  });
+}}
+startingQuestionIndex++
+quizBody();
 
 // function endgame(){
    // score = secondsLeft
-
-
