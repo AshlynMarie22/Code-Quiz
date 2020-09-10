@@ -8,7 +8,7 @@ var button4 = document.querySelector("#btn4");
 var questionsCont = document.getElementById("questions");
 var questionHeader = document.getElementById("question-header");
 var answerWrong = document.getElementById("answer-response-wrong");
-var answerRight = document.getElementById("answer-response-correct");
+var answerResponse = document.getElementById("answer-response-correct");
 
 
 //Inital set up for questions:
@@ -39,7 +39,7 @@ startQuizBtn.addEventListener("click", function () {
   }
   setTime();
   startQuiz.style.display = "none";
-  answerRight.style.display = "none";
+  answerResponse.style.display = "none";
   answerWrong.style.display = "none";
   questionsCont.style.display="block";
  
@@ -104,26 +104,30 @@ function question1() {
 
     button1.onclick = function(){
         console.log("wrong");
-        answerWrong.style.display = "block";
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
         secondsLeft -= 10;
         question2();
     }
     button2.onclick = function () {
         console.log("wrong");
-        answerWrong.style.display = "block";
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
         secondsLeft -= 10;
         question2();
 
     }
     button3.onclick = function (){
         console.log("correct");
-        answerRight.style.display = "block";
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Correct!";
         question2();
     }
 
     button4.onclick = function () {
         console.log("wrong");
-        answerWrong.style.display = "block";
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
         secondsLeft -= 10;
         question2();
 
@@ -131,8 +135,169 @@ function question1() {
 
   };
 
+function question2(){
+    questionHeader.innerText = allQuestions[1].question;
+    button1.innerHTML = allQuestions[1].choices[0];
+    button2.innerHTML = allQuestions[1].choices[1];
+    button3.innerHTML = allQuestions[1].choices[2];
+    button4.innerHTML = allQuestions[1].choices[3];
 
 
+    button1.onclick = function(){
+        console.log("wrong");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
+        secondsLeft -= 10;
+        question3();
+    }
+    button2.onclick = function () {
+        console.log("wrong");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
+        secondsLeft -= 10;
+        question3();
+
+    }
+    button3.onclick = function (){
+        console.log("correct");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Correct!";
+        question3();
+    }
+
+    button4.onclick = function () {
+        console.log("wrong");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
+        secondsLeft -= 10;
+        question3();
+
+    }
+
+  };
+
+  function question3(){
+    questionHeader.innerText = allQuestions[2].question;
+    button1.innerHTML = allQuestions[2].choices[0];
+    button2.innerHTML = allQuestions[2].choices[1];
+    button3.innerHTML = allQuestions[2].choices[2];
+    button4.innerHTML = allQuestions[2].choices[3];
+
+
+    button1.onclick = function(){
+        console.log("wrong");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
+        secondsLeft -= 10;
+        question4();
+    }
+    button2.onclick = function () {
+        console.log("wrong");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
+        secondsLeft -= 10;
+        question4();
+
+    }
+    button3.onclick = function (){
+        console.log("wrong");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
+        secondsLeft -= 10;
+        question4();
+    }
+
+    button4.onclick = function () {
+        console.log("correct");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Correct!";
+        question4();
+
+    }
+
+  };
+
+  function question4(){
+    questionHeader.innerText = allQuestions[3].question;
+    button1.innerHTML = allQuestions[3].choices[0];
+    button2.innerHTML = allQuestions[3].choices[1];
+    button3.innerHTML = allQuestions[3].choices[2];
+    button4.innerHTML = allQuestions[3].choices[3];
+
+
+    button1.onclick = function(){
+        console.log("wrong");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
+        secondsLeft -= 10;
+        question5();
+    }
+    button2.onclick = function () {
+        console.log("wrong");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
+        secondsLeft -= 10;
+        question5();
+
+    }
+    button3.onclick = function (){
+        console.log("correct");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Correct!";
+        question5();
+    }
+
+    button4.onclick = function () {
+        console.log("wrong");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
+        secondsLeft -= 10;
+        question5();
+
+    }
+
+  };
+
+  function question5(){
+    questionHeader.innerText = allQuestions[4].question;
+    button1.innerHTML = allQuestions[4].choices[0];
+    button2.innerHTML = allQuestions[4].choices[1];
+    button3.innerHTML = allQuestions[4].choices[2];
+    button4.innerHTML = allQuestions[4].choices[3];
+
+
+    button1.onclick = function(){
+        console.log("wrong");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
+        secondsLeft -= 10;
+        endGame();
+    }
+    button2.onclick = function () {
+        console.log("wrong");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
+        secondsLeft -= 10;
+        endGame();
+
+    }
+    button3.onclick = function (){
+        console.log("wrong");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Wrong!";
+        secondsLeft -= 10;
+        endGame();
+    }
+
+    button4.onclick = function () {
+        console.log("correct");
+        answerResponse.style.display = "block";
+        answerResponse.innerText = "Correct!";
+        endGame();
+
+    }
+
+  };
 // function endgame(){
    // score = secondsLeft
 
