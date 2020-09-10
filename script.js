@@ -108,13 +108,26 @@ function question1() {
         secondsLeft -= 10;
         question2();
     }
+    button2.onclick = function () {
+        console.log("wrong");
+        answerWrong.style.display = "block";
+        secondsLeft -= 10;
+        question2();
 
-    console.log("correct");
-    answerRight.style.display = "block";
-   // buttonEL.addEventListener("click",()=> {
-        
-      console.log("click");
+    }
+    button3.onclick = function (){
+        console.log("correct");
+        answerRight.style.display = "block";
+        question2();
+    }
 
+    button4.onclick = function () {
+        console.log("wrong");
+        answerWrong.style.display = "block";
+        secondsLeft -= 10;
+        question2();
+
+    }
 
   };
 
